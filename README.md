@@ -27,13 +27,13 @@ This project is the first step in building a full web application for an AirBnB 
    cd AirBnB_clone
 ````
 
-2. Ensure you have Python 3.8+ installed.
+2.  Ensure you have Python 3.8+ installed.
 
 3. Make the console executable:
 
-   ```bash
-   chmod +x console.py
    ```
+   chmod +x console.py
+   ````
 
 ## Usage
 
@@ -50,9 +50,9 @@ EOF  help  quit
 (hbnb)
 (hbnb) quit
 $
-```
+````
 
-### Non-Interactive Mode
+Non-Interactive Mode
 
 Run the console with a command:
 
