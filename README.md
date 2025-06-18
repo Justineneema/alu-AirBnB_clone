@@ -1,112 +1,83 @@
-# AirBnB Clone - The Console
+**AirBnB Clone \- The Console**
 
-## Description
+This is the AirBnB app, focused on the backend part.    
+It works like a command interpreter where we can create, update, delete, and show objects.  
 
-This project is the first step in building a full web application for an AirBnB clone. It consists of a command-line interpreter that allows users to create, update, delete, and manage objects related to the AirBnB system, such as users, places, cities, and more.
+**Project Description**
 
-## The command interpreter provides functionalities to:
+This project is about building the base of a full web app like AirBnB.    
+We start with a command-line interface that manages objects using JSON file storage.
 
-- Create new objects (e.g., User, Place)
-- Retrieve objects from storage
-- Update object attributes
-- Delete objects
-- Perform operations such as counting and computing statistics
+**How to Start It**
 
-## Features
+git clone [https://github.com/justineneema/alu-AirBnB\_clone.git](https://github.com/justineneema/alu-AirBnB_clone.git)
 
-- Custom command-line interface using Python's `cmd` module
-- Serialization and deserialization of objects using JSON
-- A base model class that handles unique IDs, timestamps, and persistence
-- Unit testing using the `unittest` framework
+cd alu-AirBnB\_clone
 
-## Installation
+**RUN THIS COMMAND**
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/justineneema/alu-AirBnB_clone.git
-   cd AirBnB_clone
-````
+python3 console.py
 
-2.  Ensure you have Python 3.8+ installed.
+**How to Use It**
 
-3. Make the console executable:
+Once you're inside the console, you can use commands like:
 
-   ```
-   chmod +x console.py
-   ````
+create \<class\_name\> \- creates a new object
 
-## Usage
+show \<class\_name\> \<id\> \- shows the object
 
-### Interactive Mode
+destroy \<class\_name\> \<id\> \- deletes the object
 
-Run the command interpreter in interactive mode:
+all \- lists all objects
 
-```
-$ ./console.py
-(hbnb) help
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-(hbnb)
-(hbnb) quit
-$
-````
+update \<class\_name\> \<id\> \<attr\_name\> "\<attr\_value\>" \- updates object
 
-Non-Interactive Mode
+**Example :** 
 
-Run the console with a command:
+$ create BaseModel  
+$ show BaseModel 1234-1234-1234  
+$ destroy BaseModel 1234-1234-1234  
+$ all  
+$ update BaseModel 1234-1234-1234 name "My\_Model"
 
-```
-$ echo "help" | ./console.py
-(hbnb)
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-(hbnb)
-```
+**This is file structure .**
 
-## File Structure
+├── console.py  
+├── models  
+│   ├── amenity.py  
+│   ├── base\_model.py  
+│   ├── city.py  
+│   ├── engine  
+│   │   ├── file\_storage.py  
+│   │   ├── \_\_init\_\_.py  
+│   │   └── \_\_pycache\_\_  
+│   │       ├── file\_storage.cpython-310.pyc  
+│   │       └── \_\_init\_\_.cpython-310.pyc  
+│   ├── \_\_init\_\_.py  
+│   ├── place.py  
+│   ├── \_\_pycache\_\_  
+│   │   ├── amenity.cpython-310.pyc  
+│   │   ├── base\_model.cpython-310.pyc  
+│   │   ├── city.cpython-310.pyc  
+│   │   ├── \_\_init\_\_.cpython-310.pyc  
+│   │   ├── place.cpython-310.pyc  
+│   │   ├── review.cpython-310.pyc  
+│   │   ├── state.cpython-310.pyc  
+│   │   └── user.cpython-310.pyc  
+│   ├── review.py  
+│   ├── state.py  
+│   └── user.py  
+└── tests  
+    ├── \_\_init\_\_.py  
+    ├── \_\_pycache\_\_  
+    │   └── \_\_init\_\_.cpython-310.pyc  
+    └── test\_model  
+        ├── \_\_init\_\_.py  
+        ├── \_\_pycache\_\_  
+        │   ├── \_\_init\_\_.cpython-310.pyc  
+        │   └── test\_base\_model.cpython-310.pyc  
+        └── test\_base\_model.py
 
-```
-AirBnB_clone/
-├── console.py                # Command interpreter
-├── models/
-│   ├── __init__.py           # Initializes models package
-│   ├── base_model.py         # BaseModel class
-│   ├── user.py               # User class (inherits from BaseModel)
-│   ├── place.py              # Place class (inherits from BaseModel)
-│   ├── city.py               # City class (inherits from BaseModel)
-│   ├── state.py              # State class (inherits from BaseModel)
-│   ├── amenity.py            # Amenity class (inherits from BaseModel)
-│   ├── review.py             # Review class (inherits from BaseModel)
-│   └── engine/
-│       ├── file_storage.py   # Handles object storage in JSON format
-│       └── __init__.py       # Initializes storage engine
-├── tests/
-│   ├── test_models/
-│   │   ├── test_base_model.py    # Unit tests for BaseModel
-│   │   ├── test_user.py          # Unit tests for User
-│   │   └── ...
-├── README.md
-├── AUTHORS
-├── requirements.txt
-```
-
-## Testing
-
-Run all unit tests using:
-
-```
-python3 -m unittest discover tests
-```
-
-Run a specific test file:
-
-```
-python3 -m unittest tests/test_models/test_base_model.py
-```
-
-## Authors
-
-* Neema Justine
+AUTHOR : Justine Neema\<j.neema@alustudent.com\>  
+Email: [j.neema@alustudent.com](mailto:j.neema@alustudent.com)
 
